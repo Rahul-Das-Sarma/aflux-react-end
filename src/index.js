@@ -27,10 +27,13 @@ const logger = store => {
 }
 
 const initialState = {
-
+  UserSignIn:{
     userInfo: localStorage.getItem('userInfo')
-      ? JSON.parse(localStorage.getItem('userInfo'))
-      : null,
+    ? JSON.parse(localStorage.getItem('userInfo'))
+    : null,
+    token: null
+  }
+   ,
     
     cart: {
     cartItems: localStorage.getItem('cartItems')

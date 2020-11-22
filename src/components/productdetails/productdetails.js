@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./productdetails.css";
 import { connect } from 'react-redux';
 import { ProductDetailsinfo, AddToCart } from '../../store/actions/actioncreator';
@@ -7,13 +7,13 @@ const ProductDetails = (props) =>{
 
     const itemId = props.match.params.itemId;
 
-    const productDetailChosen = useCallback((props)=> {props.detailInfo(itemId);},[])
+  
     
     useEffect(()=>{
    
-        productDetailChosen()
+        props.detailInfo(itemId)
 
-    }, [productDetailChosen])
+    }, [ props.detailInfo])
 
 console.log(props.prodDetails);
  

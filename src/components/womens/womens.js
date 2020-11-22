@@ -1,4 +1,4 @@
-import React, {useCallback,useEffect} from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { WomenProductsInfo, AddToCart } from '../../store/actions/actioncreator'
@@ -7,11 +7,11 @@ import { WomenProductsInfo, AddToCart } from '../../store/actions/actioncreator'
 const WomensClothing= (props) => {
     
     
-    const fetchProductsforStore = useCallback(() => { props.fetchProducts();},[])
+  
   
     useEffect(()=>{
-     fetchProductsforStore()
-    },[fetchProductsforStore])
+        props.fetchProducts()
+    },[])
   
   
 
@@ -38,7 +38,7 @@ const WomensClothing= (props) => {
              <div key={item._id}  className="card" >
                  <Link to={`/${item._id}`} >
              <div className="card-image">
-                 <img  className="img-container" src={item.photo}/>
+                 <img  className="img-container" src={item.photo} alt="" />
              </div>
              </Link>
              <div className="card-info">

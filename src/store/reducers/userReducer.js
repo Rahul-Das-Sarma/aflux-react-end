@@ -22,14 +22,14 @@ export const UserSigninReducer = (state = {userInfo:{}, token: null}, action) =>
     console.log(action.payload);
 switch(action.type){
     case actionTypes.USER_SIGNIN_REQUEST: 
-    return {loading: true}
+    return {...state, loading: true}
 
     case actionTypes.USER_SIGNIN_SUCCESS: 
     console.log(action.payload);
-    return {loading: false, userInfo: action.payload, token: action.payload}
+    return {...state, loading: false, userInfo: action.payload, token: action.payload}
 
     case actionTypes.USER_SIGNIN_FAIL:
-    return {loading: false, error: action.payload}
+    return {...state,loading: false, error: action.payload}
 
     case actionTypes.USER_SIGNOUT:
         return {token: null};
