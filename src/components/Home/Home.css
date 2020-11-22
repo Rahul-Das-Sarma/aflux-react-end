@@ -1,0 +1,95 @@
+.card-container{
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.card{
+    width : 320px;
+    height: 420px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    align-items: center;
+    margin: 25px;
+     position: relative;
+   animation: mymove .4s;
+   animation-timing-function: ease-in;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+} 
+
+@keyframes mymove{
+    0% {left: -5%; opacity: 0; }  
+  
+    100%{left: 0; }
+
+}
+
+
+
+.card-image{
+    padding-top: 20px ;
+    max-width: 300px;
+    margin: auto;
+   text-align: center;
+   cursor: pointer;
+}
+.img-container{
+    height: 200px;
+    width: 210px;
+}
+
+.card-info{
+    text-align: center;
+}
+
+.btn-prop{
+    border: none;
+    outline: none;
+    margin: 5px;
+    color: black;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform .4s ease-in;  
+    
+}
+
+.cart-btn{
+    background-color: #f39912;
+    padding: 6px 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 90px
+}
+.btn-prop:hover{
+    color: #fff;
+    transform: scale(1.1)
+}
+
+.loader {
+    border: 16px solid #48b8b2;
+    border-radius: 50%;
+    border-top: 16px solid #028fec;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+ 
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .price-para{
+      position: absolute;
+       bottom: 60px;
+       left: 120px
+  }

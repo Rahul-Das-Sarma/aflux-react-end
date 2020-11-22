@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {   
+    /* background-image:  linear-gradient(to left, rgb(75, 162, 165), rgb(46, 150, 145));; */
+    max-width: 1110px;
+    margin: auto;
+    overflow-x: hidden;
+    font-family: 'Commissioner';
+    padding-left: 10px;
+    
+  }
+
+

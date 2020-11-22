@@ -1,0 +1,32 @@
+.shipping-address-container{
+    margin: 20px;
+    display: flex;
+   justify-content: center;
+}
+
+.shipping-address-card{
+    max-width: 650px;
+    width : 100%;
+    height: 100%;
+    border: 1px solid #fff;
+    background-color: #fff;
+    margin-top: 40px;
+    margin-left: 10px ;
+    margin-right: 10px ;
+    margin-bottom: 10px ;
+    border-radius: 10px;
+    -webkit-box-shadow: -2px 2px 5px 2px rgba(179,179,179,1);
+    -moz-box-shadow: -2px 2px 5px 2px rgba(179,179,179,1);
+    box-shadow: -2px 2px 5px 2px rgba(179,179,179,1);
+    position: relative;
+    animation: fromleft 1s ease;
+}
+.firstName-shipping{
+    padding-top: 20px;
+}
+
+.btn-shipping-address{
+    margin: 20px 0;
+    width: 80%;
+}
+

@@ -1,0 +1,10 @@
+.category-header{
+    padding-top: 40px;
+    animation: hrmove 1s ease-in;
+    position: relative;
+}
+
+@keyframes hrmove{
+    from{left: -100%;}
+    to {left: 0}
+}

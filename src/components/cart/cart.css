@@ -1,0 +1,60 @@
+.Cart-container{
+    margin-top: 100px;
+    max-width:1110px; 
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 40px;
+    animation: moveleftToRight 1s ease-in ;
+    position: relative;  
+}
+
+
+@keyframes moveleftToRight {
+    from {opacity: 0; left: -100px}
+    to {opacity: 1; left: 0}
+}
+.increase-quantity{
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: rgb(223, 125, 55);
+    padding-left: 2px;
+    border-radius: 3px;
+    padding-bottom: 2px;
+    width: 5px;
+    height: 5px;
+}
+.decrease-quantity{
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: rgb(223, 125, 55);
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 3px;
+    padding-bottom: 2px;
+    width: 7px;
+    height: 5px;
+}
+.increase-quantity:hover,
+.decrease-quantity:hover{
+    color: white
+}
+.proceed-to-buy-btn{
+    outline: none;
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgb(218, 113, 39);
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.proceed-to-buy-btn:hover{
+    color: #fff;
+    transition: all .2s;
+    background-color: rgb(236, 167, 17);
+}
