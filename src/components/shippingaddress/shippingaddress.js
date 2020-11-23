@@ -7,21 +7,31 @@ import {saveShippingAddress} from '../../store/actions/actioncreator'
 
 const ShippingAddress = (props) => {
 
-    const [fname, setFName] = useState("");
-    const [lname, setLName] = useState("");
-    const [pincode, setPincode] = useState("");
-    const [hNo, setHno] = useState("");
-    const [fullAddress, setFullAddress] = useState("");
+    const [fname, setFName] = useState(null);
+    const [lname, setLName] = useState(null);
+    const [pincode, setPincode] = useState(null);
+    const [hNo, setHno] = useState(null);
+    const [fullAddress, setFullAddress] = useState(null);
 
 const retrievingShippingInfo = () => {
     props.ShippingAddressInfoDispatch(fname, lname, pincode, hNo, fullAddress);
 }
 
-useEffect(() => {
-if(props.ShippingAddressInfo){
-    props.history.push('/order-details');
-}
-},[props.ShippingAddressInfo])
+
+// useEffect(() => {
+// if(Object.keys(props.ShippingAddressInfo).length > 0){
+//    props.history.push('/order-details');
+//     // props.history.push('/order-details');
+// }
+// },[props.ShippingAddressInfo])
+ useEffect(() =>{
+     if(props.ShippingAddressInfo.fname && props.ShippingAddressInfo.lname && props.ShippingAddressInfo.pincode && props.ShippingAddressInfo.fullAddress ){
+        props.history.push('/order-details');
+     }
+ },[props.ShippingAddressInfo.fname, props.ShippingAddressInfo.lname, props.ShippingAddressInfo.pincode, props.ShippingAddressInfo.fullAddress])
+
+
+console.log(props.ShippingAddressInfo);
 
 useEffect(() => {
     if(props.userinfo.token === null){
@@ -75,6 +85,8 @@ return(<>
 }
 
 const mapStateToProps = (state) => {
+    console.log(state.UserSignIn);
+    console.log(state.cart.shippingAddress);
     return {
         userinfo: state.UserSignIn,
         ShippingAddressInfo: state.cart.shippingAddress

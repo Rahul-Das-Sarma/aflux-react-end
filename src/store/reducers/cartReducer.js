@@ -59,7 +59,7 @@ case actionTypes.SAVE_SHIPPING_ADDRESS:
 
 return {
   ...state, 
-  shippingaddress: action.payload
+  shippingAddress: action.payload
 }
         default:
             return state;

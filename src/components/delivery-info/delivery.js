@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 
 
 const DeliveryInformation = (props) => {
-    useEffect(( props) => {
+    useEffect(() => {
         if(props.userinfo.token === null){
             props.history.push('/')
         }
-    },[props.userinfo.token])
+    },[])
+    
     
 return(<div className="delivery-container">
  <h3>Delivery Information</h3>
@@ -27,6 +28,7 @@ return(<div className="delivery-container">
 }
 
 const mapStateToProps = (state) => {
+  
     return {
         userinfo: state.UserSignIn,
         items: state.cart.shippingAddress
