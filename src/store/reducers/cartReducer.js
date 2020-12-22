@@ -66,4 +66,4 @@ return {
 }
 } 
 
-export default(CartReducer);
+export default CartReducer;
